@@ -23,19 +23,11 @@
         cursor: pointer;
     }
     input[type="number"] {
-        width: 70px;
-        padding: 5px;
+        width: 30px;
+        padding: 15px;
         border-radius: 5px;
-        border: 1px solid #ccc;
+        border: 3px solid #ccc;
     }
 	
 	<link rel="stylesheet" type="text/css" href="style.css" />
-/* En el archivo style.css */
 
-/* Establecer un ancho específico para las casillas de entrada de número */
-input[type="number"] {
-    width: 10px; /* Puedes ajustar este valor según tu preferencia */
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
