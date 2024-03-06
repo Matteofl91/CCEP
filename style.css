@@ -23,7 +23,7 @@
         cursor: pointer;
     }
     input[type="number"] {
-        width: 20px;
+        width: 30px;
 	height: 5px;
         padding: 5px;
         border-radius: 1px;
