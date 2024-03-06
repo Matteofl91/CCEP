@@ -17,15 +17,16 @@
     <h3>Días trabajados por categoría: (máximo 30 días naturales)</h3>
   <center>
       <H5>
-    <div>
+    <div class="quantity">
         <label for="b3">B3:</label>
-        <input type="range" id="b3" name="b3" min="0" max="30" step="1" value="30">
-        <output class="b3-output" for="b3"></output>
+        <input type="number" id="b3" name="b3" min="0" max="30" step="1">
+    
         <label for="b4">B4:</label>
         <input type="number" id="b4" name="b4" min="0" max="30" step="1">
         
         <label for="c5">C5:</label>
         <input type="number" id="c5" name="c5" min="0" max="30" step="1">
+        
         <label for="c6">C6:</label>
         <input type="number" id="c6" name="c6" min="0" max="30" step="1">
     </div>
@@ -115,6 +116,75 @@ document.getElementById("nominaform").addEventListener("submit", function(event)
 });
 
 </script>
+    
+.quantity {
+  position: relative;
+}
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]
+{
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  width: 45px;
+  height: 42px;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: 1px solid #eee;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 42px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #eee;
+  width: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 13px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+  line-height: 1.7;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: -1px;
+  height: 50%;
+}
 </body>
 </html>
