@@ -30,3 +30,12 @@
     }
 	
 	<link rel="stylesheet" type="text/css" href="style.css" />
+/* En el archivo style.css */
+
+/* Establecer un ancho específico para las casillas de entrada de número */
+input[type="number"] {
+    width: 50px; /* Puedes ajustar este valor según tu preferencia */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
