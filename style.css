@@ -24,6 +24,7 @@
     }
     input[type="number"] {
         width: 10px;
+	height: 5px;
         padding: 5px;
         border-radius: 1px;
         border: 2px solid #ccc;
