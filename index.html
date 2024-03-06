@@ -19,7 +19,7 @@
       <H5>
     <div>
         <label for="b3">B3:</label>
-        <input type="number" id="b3" name="b3" min="0" max="30" step="1">
+        <input type="range" id="b3" name="b3" min="0" max="30" step="1" value="30">
         <label for="b4">B4:</label>
         <input type="number" id="b4" name="b4" min="0" max="30" step="1">
         
@@ -108,7 +108,7 @@
 <h3>Recordar que el sueldo final es en bruto. Este se podrá revisar en la columna izquierda de nuestra nómina.</h3>
 
 <script>
-document.getElementById("nom").addEventListener("submit", function(event) {
+document.getElementById("nominaform").addEventListener("submit", function(event) {
     event.preventDefault();
     calcularNomina();
 });
