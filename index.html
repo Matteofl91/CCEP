@@ -61,6 +61,11 @@
             width: 100%;
             z-index: 0; /* Asegura que la imagen esté detrás de todo */
         }
+        .small-image {
+            display: block;
+            margin: 20px auto; /* Centra la imagen horizontalmente */
+            max-width: 100px; /* Tamaño máximo de la imagen */
+        }
     </style>
 </head>
 <body>
@@ -71,9 +76,9 @@
         <form action="https://formspree.io/f/myyrnkoa" method="post">
             <textarea name="opinion" rows="9" placeholder="Escribe tu opinión aquí..."></textarea><br>
             <input type="submit" value="Enviar">
+            <img class="small-image" src="cc.jpg" alt="CC Image">
             <img class="background-image" src="cc_background.jpg" alt="">
         </form>
     </div>
 </body>
 </html>
-
