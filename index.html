@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <center>
     <title>Buzón de Opiniones Coca-Cola</title>
-    </center>
+    <style>
+        body {
+            background-image: url('cc_background.jpg'); /* Reemplaza 'cc_background.jpg' con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8); /* Agrega un fondo semitransparente al formulario */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff0000; /* Cambia el color de fondo del botón */
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover {
+            background-color: #cc0000; /* Cambia el color de fondo del botón al pasar el ratón sobre él */
+        }
+    </style>
 </head>
 <body>
-     
-    <center>
-    <h1>Buzón de Opiniones Coca-Cola</h1>
-    <p>¡Bienvenido! Por favor, deja tu opinión o comentario de forma anónima:</p>
+    <h1 style="color: white;">Buzón de Opiniones Coca-Cola</h1>
+    <p style="color: white;">¡Bienvenido! Por favor, deja tu opinión o comentario de forma anónima:</p>
     <form action="https://formspree.io/f/myyrnkoa" method="post">
         <textarea name="opinion" rows="4" cols="50" placeholder="Escribe tu opinión aquí..."></textarea><br>
         <input type="submit" value="Enviar">
     </form>
-    </center>
 </body>
 </html>
