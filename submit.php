@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $opinion = $_POST['opinion'];
 
     // Dirección de correo electrónico a la que enviar la opinión
-    $destinatario = 'cliente@ccep.com';
+    $destinatario = 'csifcolebega@gmail.com';
 
     // Asunto del correo electrónico
     $asunto = 'Nueva opinión de un empleado';
