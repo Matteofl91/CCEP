@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <center></center>
     <title>Buzón de Opiniones Coca-Cola</title>
-    </center>
+    <script>
+        function enviarOpinion() {
+            var opinion = document.getElementById("opinion").value;
+            var link = "mailto:cliente@ccep.com?subject=Nueva opinión de un empleado&body=" + encodeURIComponent(opinion);
+            window.location.href = link;
+        }
+    </script>
 </head>
 <body>
-    <center>
     <h1>Buzón de Opiniones Coca-Cola</h1>
     <p>¡Bienvenido! Por favor, deja tu opinión o comentario de forma anónima:</p>
-    <form action="submit.php" method="post">
-        <textarea name="opinion" rows="4" cols="50" placeholder="Escribe tu opinión aquí..."></textarea><br>
-        <input type="submit" value="Enviar">
-    </form>
-    </center>
+    <textarea id="opinion" rows="4" cols="50" placeholder="Escribe tu opinión aquí..."></textarea><br>
+    <button onclick="enviarOpinion()">Enviar</button>
 </body>
 </html>
