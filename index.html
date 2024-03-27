@@ -6,22 +6,20 @@
     <title>Buzón de Opiniones</title>
     <style>
         body {
-            background-image: url('cc_background.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #ff0000; /* Fondo rojo */
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         .container {
+            position: relative;
             max-width: 600px;
+            margin: 0 auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             text-align: center;
+            overflow: hidden; /* Oculta la imagen que se extiende más allá del contenedor */
         }
         h1 {
             color: #333;
@@ -32,7 +30,7 @@
             margin-bottom: 30px;
         }
         textarea {
-            width: 100%;
+            width: calc(100% - 22px); /* Tamaño menos el ancho del scroll */
             padding: 10px;
             margin-bottom: 20px;
             border-radius: 5px;
@@ -40,16 +38,25 @@
             resize: vertical;
         }
         input[type="submit"] {
+            position: relative;
+            z-index: 1; /* Coloca el botón por encima de la imagen */
             padding: 10px 20px;
             border: none;
-            background-color: #ff0000;
+            background-color: #ff0000; /* Cambia el color de fondo del botón */
             color: white;
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s;
         }
         input[type="submit"]:hover {
-            background-color: #cc0000;
+            background-color: #cc0000; /* Cambia el color de fondo del botón al pasar el ratón sobre él */
+        }
+        .background-image {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            z-index: 0; /* Asegura que la imagen esté detrás de todo */
         }
     </style>
 </head>
@@ -61,6 +68,7 @@
         <form action="https://formspree.io/f/myyrnkoa" method="post">
             <textarea name="opinion" rows="9" placeholder="Escribe tu opinión aquí..."></textarea><br>
             <input type="submit" value="Enviar">
+            <img class="background-image" src="cc_background.jpg" alt="">
         </form>
     </div>
 </body>
